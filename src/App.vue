@@ -1,0 +1,77 @@
+<template>
+	<div class="main">
+		<div class="timer">
+		</div>
+		<div class="frame">
+			<div class="light-common red">
+			</div>
+		</div>
+		<div class="frame central-frame">
+			<div class="light-common yellow">
+			</div>
+		</div>
+		<div class="frame">
+			<div class="light-common green">
+			</div>
+		</div>
+		<router-view />
+	</div>
+</template>
+
+<style lang="scss">
+.main {
+	width: 200px;
+	height: 615px;
+	border: 2px solid #474747;
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+	.timer {
+		height: 50px;
+		border-bottom: 1px solid #242424;
+	}
+	.frame {
+		box-sizing: border-box;
+		height: 200px;
+		background-color: #e6e6e6;
+		padding: 20px;
+		.light-common {
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+		}
+		.red {
+			background-color: #6e4a4c;
+		}
+		.yellow {
+			background-color: #6e6a4c;
+		}
+		.green {
+			background-color: #3f4d40;
+		}
+	}
+	.frame:nth-child(3) {
+		height: 160px;
+		padding: 0 20px;
+	}
+	#timer {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		font-size: 22px;
+		padding: 10px 0 0 0;
+		p {
+			margin: 0;
+		}
+	}
+	.light {
+		position: absolute;
+		left: 18px;
+		height: 160px;
+		width: 160px;
+		border-radius: 50%;
+	}
+}
+</style>
