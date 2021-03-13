@@ -14,7 +14,7 @@ export default {
   name: 'Red',
   data() {
     return {
-      seconds: 5,
+      seconds: 10,
       isBlinking: false,
       isActive: true
     }
